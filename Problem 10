@@ -1,0 +1,16 @@
+#Problem3.py
+#Project Euler problem 3
+
+from NumberTests import isPrime
+
+def prime_below(limit):
+    total = 0
+    for num  in range(2, limit):
+        if isPrime(num):
+            total += num
+    return total
+
+if __name__ == '__main__':
+    limit = 2000000
+    factor = prime_below(limit)
+    print("primes below two million is:", factor)
